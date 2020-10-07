@@ -1,0 +1,681 @@
+<html>
+<head>
+<title>New Page</title>
+<style>
+	.container
+	{
+		max-width:1380px;
+		overflow:hidden;
+		
+		display:block;
+		position:relative;
+	}
+	.background
+	{
+		padding-bottom:200px;
+		
+	}
+	.new
+	{
+		
+		width:100%;
+		height:600px;
+		background-image:url("./img/hiker-1149898_1920.jpg");
+		box-sizing:border-box;
+	    background-position:center center;
+		background-repeat:no-repeat;
+		background-size:cover;
+	}
+	.top
+	{
+		width:100%;
+		height:49px;
+		margin:0 auto;
+	}
+	.box1
+	{
+		width:20%;
+		border-right:1px solid #e6e6e6;
+		padding:0 10px 0 105px;
+		float:left;
+		box-sizing:border-box;
+	
+	}
+	.box1 p
+	{
+		margin:0;
+		color:#fff;
+	}
+	.box1 p img
+	{
+		border-radius:50%;
+		box-sizing:border-box;
+	    background-position:center center;
+		background-repeat:no-repeat;
+		background-size:cover;
+	}
+	.box2
+	{
+		width:40%;
+		
+		padding:0 10px 0 40px;
+		float:left;
+		box-sizing:border-box;
+		
+	}
+	.box2 p
+	{
+		margin:0;
+		color:#fff;
+	}
+	.box2 p img
+	{
+		border-radius:50%;
+		box-sizing:border-box;
+	    background-position:center center;
+		background-repeat:no-repeat;
+		background-size:cover;
+	}
+	.box3
+	{
+		width:40%;
+		
+		padding:0 10px 0 250px;
+		float:right;
+		box-sizing:border-box;
+		
+	}
+	
+	.list li
+	{
+		padding:0 10px;
+		text-align:center;
+		float:left;
+		list-style:none;
+	}
+	.list li a
+	{
+		color: #666666;	
+		display:inline-block;
+		text-decoration: none;
+		font-family: 'Open Sans', 'Helvetica', 'Arial', sans-serif;
+		font-weight: 300;
+		font-variant-ligatures: common-ligatures;
+		font-size:13px;
+	}
+	.list li a img
+	{
+		height:25px;
+		box-sizing:border-box;
+		background-position:right;
+		background-size:cover;
+		background-repeat: no-repeat;
+		border-radius:50%;
+	}
+	p.solid
+	{
+		border-top:1px solid #e6e6e6;
+		margin:0;
+	}
+	.travel
+	{
+		height:100px;
+		width:100%;
+		box-sizing:border-box;
+		margin:0 0 25px 0;
+	}
+	.t1
+	{
+		width:35%;
+		box-sizing:border-box;
+		float:left;
+		padding:0 10px;
+	}
+	.t1 a img
+	{
+		
+		padding: 25px 10px 10px 105px;
+		box-sizing:border-box;
+		background-position:center center;
+		background-repeat:no-repeat;
+		background-size:cover;
+	}
+	.t2
+	{
+		width:65%;
+		box-sizing:border-box;
+		float:left;
+		padding:0 10px;
+	}
+	.link li
+	{
+		margin:20px;
+		text-align:center;
+		float:left;
+		list-style:none;
+		position: relative;
+		padding-bottom: 5px;
+	}
+	.link li a
+	{
+		color: #fff;
+		display:inline-block;
+		text-decoration: none;
+		font-family: 'Open Sans', 'Helvetica', 'Arial', sans-serif;
+		font-weight: 300;
+		font-variant-ligatures: common-ligatures;
+		font-size:16px;
+	}
+	.dropMenu 
+	{
+		position: absolute;
+		left: 0;
+		top: 100%;
+		background: #fff;
+		width: 160px;
+		padding:0;
+		visibility:hidden;
+		transition: all ease-out 0.3s;
+		opacity:0;
+		transform: translateY(40px);
+	}
+	.dropMenu li a
+	{
+		color:#000000;
+	}
+	.link li:hover .dropMenu
+	{
+		transform: translateY(0);
+		visibility:visible;
+		opacity:1;
+	}
+	.link li .dropMenu li
+	{
+		padding: 8px 12px;
+		float: none;
+		text-align: left;
+		margin:0;
+	}
+	.link li a img
+	{
+		height:25px;
+		box-sizing:border-box;
+		background-position:right;
+		background-size:cover;
+		background-repeat: no-repeat;
+	}
+	.bin
+	{
+		height:150px;
+		width:80%;
+		margin:0 auto;
+		background-color:#fff;
+		border:1px solid #cccccc;
+		box-shadow:0px 0px 15px #1a1a1a;
+		position:absolute;
+		border-radius:70px;
+		left:140px;
+		top:525px;
+	}
+	.button 
+	{
+		width:20%;
+		background-color: #4CAF50;
+		border:none;
+		color: white;
+		padding: 15px 32px;
+		text-align: center;
+	    text-decoration: none;
+		display: inline-block;
+		font-size: 16px;
+		margin: 4px 2px;
+		border-radius: 50px;
+		position:absolute;
+		left: 40px;
+		bottom:20px;
+	}
+	.i1
+	{
+		width: 20%;
+        padding: 12px 20px;
+        margin: 12px 0 8px 0;
+        display: inline-block;
+        border: 1px solid #ccc;
+		border-radius: 50px;
+		box-sizing: border-box;
+		position:absolute;
+		left: 40px;
+		bottom:80px;
+	}
+	.i2
+	{
+		
+		width: 20%;
+        padding: 12px 20px;
+        margin: 12px 10px 8px 10px;
+        display: inline-block;
+        border: 1px solid #ccc;
+		border-radius: 50px;
+		box-sizing: border-box;
+		position:absolute;
+		left: 285px;
+		bottom:80px;
+	}
+	.i3
+	{
+		
+		width: 20%;
+        padding: 12px 20px;
+        margin: 12px 10px 8px 10px;
+        display: inline-block;
+        border: 1px solid #ccc;
+		border-radius: 50px;
+		box-sizing: border-box;
+		position:absolute;
+		right: 290px;
+		bottom:80px;
+	}
+	.i4
+	{
+		width: 20%;
+		
+        padding: 12px 20px;
+        margin: 12px 10px 8px 10px;
+        display: inline-block;
+        border: 1px solid #ccc;
+		border-radius: 50px;
+		box-sizing: border-box;
+		position:absolute;
+		right: 40px;
+		bottom:80px;
+	}
+	.row
+	{
+		margin:0 auto;
+		box-sizing:border-box;
+		width:85%;
+		height:400px;
+	}
+	.r1
+	{
+		box-sizing:border-box;
+		width:48%;
+		float:left;
+		margin-left:63px;
+	    background-position:center center;
+		background-repeat:no-repeat;
+		background-size:cover;
+		position:relative;
+		
+	}
+	.r2
+	{
+		float:right;
+		box-sizing:border-box;
+		width:45%;
+		
+		margin:8px ;
+	}
+	.r2 p
+	{
+		color:#a6a6a6;
+		font-family: 'Roboto', 'Helvetica', 'Arial', sans-serif;
+		font-weight: 400;
+		font-variant-ligatures: common-ligatures;
+		font-size:16px;
+		line-height:26px;
+		
+	}
+	.r2 h1
+	{
+		font-family: 'Open Sans', 'Helvetica', 'Arial', sans-serif;
+		font-weight: 300;
+		font-variant-ligatures: common-ligatures;
+		font-size:40px;
+		margin-top:0px;
+		margin-bottom:15px;
+	}
+	.r2 a
+	{
+		font-size: 12px;
+		border:1px solid #e6e6e6;
+		border-radius:50px;
+		color: #000000;
+		padding: 14px 40px;
+		text-align: center; 
+		text-decoration: none;
+		display: inline-block;
+		font-family: 'Open Sans', 'Helvetica', 'Arial', sans-serif;
+		font-weight: 300;
+		font-variant-ligatures: common-ligatures;
+		margin-top:14px;
+	}
+	.r2 a:hover
+	{
+		background-color: #4CAF50;
+		color:#fff;
+		transition:all cubic-bezier(0.13, 0.31, 1, 1.13) 0.4s;
+	}
+	.row1
+	{
+		margin:160px auto 20px auto;
+		box-sizing:border-box;
+		width:85%;
+		height:170px;
+	}
+	.row1 h2
+	{
+		text-align:center;
+		font-family: 'poppins',  sans-serif;
+		font-weight: 700;
+		font-variant-ligatures: common-ligatures;
+		font-size:35px;
+	}
+	.row1 p
+	{
+		text-align:center;
+		font-family: 'Roboto',  sans-serif;
+		font-weight: 300;
+		font-variant-ligatures: common-ligatures;
+		line-height:25px;
+		font-size:20px;
+		margin-bottom:0px;
+	}
+	.row2
+	{
+		margin:0 auto;
+		box-sizing:border-box;
+		width:95%;
+		height:900px;
+		padding-top:50px;
+	}
+	.r21
+	{
+		padding:0 15px;
+		height:775px;
+		width:45%;
+		position:relative;
+		float:left; 
+	}
+	.r21 img
+	{
+		
+		box-sizing:border-box;
+	    background-position:center center;
+		background-repeat:no-repeat;
+		background-size:cover;
+		
+	}
+	.b1
+	{
+		width:47%;
+		height:255px;
+		padding:0 15px;
+		border:1px solid #e6e6e6;
+		border-radius:4px;
+		box-sizing:border-box;
+		float:left;
+	}
+	.b1 span img
+	{
+		margin-top: 20px;
+	}
+	.b1 h3
+	{
+		font-size:20px;
+		font-family: 'poppins',  sans-serif;
+		font-weight: 700;
+		font-variant-ligatures: common-ligatures;
+	}
+	.b1 p
+	{
+		font-family: 'Roboto',  sans-serif;
+		font-weight: 400;
+		font-variant-ligatures: common-ligatures;
+		line-height:25px;
+		font-size:16px;
+		color:#777777;
+	}
+	.b1 a
+	{
+		color:#000000;
+		font-size:18px;
+		font-family: 'poppins',  sans-serif;
+		font-weight: 400;
+		font-variant-ligatures: common-ligatures;
+	}
+	.b1:hover
+	{
+		box-shadow:0px 0px 75px  30px rgba(83 ,83 ,93 ,0.2);
+		transition:all ease-in-out 0.4s;
+	}
+	.marright
+	{
+		margin-right:15px;
+	}
+	.martop
+	{
+		margin-right:15px;
+		margin-top:15px;
+	}
+	.new1
+	{
+		
+		width:100%;
+		height:450px;
+		background-image:url("./img/city-1209105_1920.jpg");
+		box-sizing:border-box;
+	    background-position:center center;
+		background-repeat:no-repeat;
+		background-size:cover;
+	}
+	.marbottom
+	{
+		margin-bottom:100px;
+	}
+	.after:after
+	{
+		content: "";
+		position: absolute;
+		left: 0;
+		top: 0;
+		width: 96%;
+		height: 100%;
+		background: #000;
+		opacity: 0.5;
+		z-index: 9;
+	}
+	.home1
+	{
+		position:relative;
+	}
+	.home1:after
+	{
+		content: '';
+		width: 8px;
+		position: absolute;
+		height: 8px;
+		transform: rotate(45deg);
+		border-bottom: 1px solid #fff;
+		border-right: 1px solid #fff;
+		top: 4px;
+		right: -15px;
+	}
+</style>
+</head>
+<body style="margin:0;">
+	<div class="container background">
+	<span class="bin">
+		
+		<input class="i1" type="text" placeholder="Search Tour">
+		<input class="i2" type="text" placeholder="Adults">
+		<input class="i3" type="text" placeholder="Child">
+		<input class="i4" type="text" placeholder="YYYY/MM/DD">
+		<button class="button">Search</button>
+	</span>
+		<div class="new">
+			<div class="top">
+				<div class="box1">
+				<p><img src="img/cll2.png" width="45px" height="45px">+123-456-7890</p>
+				</div>
+				<div class="box2">
+				<p><img src="img/msg1.png" width="40px" height="40px">info@yourcompany.com</p>
+				</div>
+				<div class="box3">
+					<ul class="list">
+						<li><a href="#"><img src="img/be2.png" width="25px" ></a></li>
+						<li><a href="#"><img src="img/t2.png"></a></li>
+						<li><a href="#"><img src="img/f.jpg"></a></li>
+						<li><a href="#"><img src="img/g1.png"></a></li>
+					</ul>
+				</div>
+			</div>
+				<p class="solid"></p>
+			<div class="travel">
+				<div class="t1">
+					<a href="#"><img src="img/logo-wht.png"></a>
+				</div>
+				<div class="t2">
+					<ul class="link">
+						<li>
+						<div class="home1">
+							<a href="#">HOME</a>
+						</div>
+							<ul class="dropMenu">
+								<li><a href="#">Home One</a></li>
+								<li><a href="#">Home Two</a></li>
+								<li><a href="#">Home Three</a></li>
+							</ul>
+						</li>
+						<li><a href="#">ABOUT US</a></li>
+						<li>
+						<div class="home1">
+							<a href="#">PACKAGES</a>
+						</div>
+							<ul class="dropMenu">
+								<li><a href="#">Package Grid</a></li>
+								<li><a href="#">Package list</a></li>
+							</ul>
+						</li>
+						<li>
+						<div class="home1">
+							<a href="#">PAGES</a>
+						</div>
+							<ul class="dropMenu">
+								<li><a href="#">Places</a></li>
+								<li><a href="#">Place Details</a></li>
+								<li><a href="#">Booking</a></li>
+								<li><a href="#">Gallery</a></li>
+								<li><a href="#">FAQ</a></li>
+								<li><a href="#">404</a></li>
+							</ul>
+						</li>
+						<li>
+						<div class="home1">
+							<a href="#">BLOG</a>
+							</div>
+							<ul class="dropMenu">
+								<li><a href="#">Single Blog</a></li>
+								<li><a href="#">Blog Grid</a></li>
+								<li><a href="#">Blog Details</a></li>
+							</ul>
+						</li>
+						<li><a href="#">CONTACT US</a></li>
+						<li><a href="#"><img src="img/s2.png"></a></li>
+					</ul>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="container">
+		<div class="row">
+			<div class="r1">
+			<div class="after">
+			<img src="img/photographer-407068_1920.jpg" width="528px" height="375px">
+			</div>
+			</div>
+			<div class="r2">
+				<h1><b>We make the best for all our customers.</b></h1>
+				<p>Ut et justo invidunt et sit takimata dolor accusam erat. Duo amet consetetur diam stet vero dolor no est accusam, aliquyam dolor vero sit sea. No justo a consetetur at lorem clita sit ea. Dolor sed clita dolor ea elitr sed elitr</p>
+				<p>Tempor dolor vero dolor sadipscing eos erat dolor sanctus aliquyam et, et justo labore lorem kasd clita consetetur no no ut erat dolor.</p>
+				<a href="#"><b>READ MORE</b></a>
+			</div>
+		</div>
+	</div>
+	<div class="container">
+		<div class="row1">
+			<h2>Why Choose Us</h2>
+			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt <br>ut labore et dolore magna aliqua minim veniam.</p>
+		</div>
+	</div>
+	<div class="container marbottom">
+		<div class="row2">
+			<div class="r21">
+				<img src="img/abt-2.png" width="500px" height="725px">
+			</div>
+			<div class="r21">
+				<div class="b1 marright">
+				<span><img src="img/travel.png" width="50px" height="50px"></span>
+				<h3>Best Travel Agent</h3>
+				<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+				<a href="#">See More</a>
+				</div>
+				<div class="b1">
+				<span><img src="img/flight.jpg" width="50px" height="50px"></span>
+				<h3>Best Price</h3>
+				<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit .</p>
+				<a href="#">See More</a>
+				</div>
+				<div class="b1 martop">
+				<span><img src="img/spealer.jpg" width="50px" height="50px"></span>
+				<h3>Trust & Safety</h3>
+				<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit .</p>
+				<a href="#">See More</a>
+				</div>
+				<div class="b1 martop">
+				<span><img src="img/house.png" width="50px" height="50px"></span>
+				<h3>Amazing Tour</h3>
+				<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit .</p>
+				<a href="#">See More</a>
+				</div>
+				<div class="b1 martop">
+				<span><img src="img/ticket-512.png" width="50px" height="50px"></span>
+				<h3>Ticket Booking</h3>
+				<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit .</p>
+				<a href="#">See More</a>
+				</div>
+				<div class="b1 martop">
+				<span><img src="img/bed.png" width="50px" height="50px"></span>
+				<h3>Hotel Booking</h3>
+				<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit .</p>
+				<a href="#">See More</a>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="container">
+		<div class="new1">	
+			<div class="a1">
+			<span></span>
+			<h2></h2>
+			<h3></h3>
+			</div>
+			<div class="a1">
+			<span></span>
+			<h2></h2>
+			<h3></h3>
+			</div>
+			<div class="a1">
+			<span></span>
+			<h2></h2>
+			<h3></h3>
+			</div>
+			<div class="a1">
+			<span></span>
+			<h2></h2>
+			<h3></h3>
+			</div>
+		</div>
+	</div>
+</body>
+</html>
